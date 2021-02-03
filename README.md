@@ -1,13 +1,13 @@
 Simple and powerful interface for [ClickHouse](https://clickhouse.yandex/) [![travis](https://travis-ci.org/apla/node-clickhouse.svg)](https://travis-ci.org/apla/node-clickhouse) [![codecov](https://codecov.io/gh/apla/node-clickhouse/branch/master/graph/badge.svg)](https://codecov.io/gh/apla/node-clickhouse)
 ===
 ```sh
-npm install @apla/clickhouse
+npm install @posthog/clickhouse
 ```
 
 Synopsis
 ---
 ```javascript
-const ClickHouse = require('@apla/clickhouse')
+const ClickHouse = require('@posthog/clickhouse')
 const ch = new ClickHouse({ host, port, user, password })
 
 const stream = ch.query("SELECT 1", (err, data) => {})
