@@ -1,4 +1,4 @@
-Simple and powerful interface for [ClickHouse](https://clickhouse.yandex/) [![travis](https://travis-ci.org/apla/node-clickhouse.svg)](https://travis-ci.org/apla/node-clickhouse) [![codecov](https://codecov.io/gh/apla/node-clickhouse/branch/master/graph/badge.svg)](https://codecov.io/gh/apla/node-clickhouse)
+Simple and powerful interface for [ClickHouse](https://clickhouse.yandex/). Fork of [@apla/node-clickhouse](https://github.com/apla/node-clickhouse). [![travis](https://travis-ci.org/apla/node-clickhouse.svg)](https://travis-ci.org/apla/node-clickhouse) [![codecov](https://codecov.io/gh/apla/node-clickhouse/branch/master/graph/badge.svg)](https://codecov.io/gh/apla/node-clickhouse)
 ===
 ```sh
 npm install @posthog/clickhouse
@@ -308,3 +308,9 @@ const { data } = await ch.querying("SELECT 1")
 const { data } = await ch.querying("DESCRIBE TABLE system.numbers", { dataObjects: true })
 // [ { name: 'number', type: 'UInt64', default_type: '', default_expression: '' } ]
 ```
+
+## Questions?
+
+### [Join our Slack community.](https://join.slack.com/t/posthogusers/shared_invite/enQtOTY0MzU5NjAwMDY3LTc2MWQ0OTZlNjhkODk3ZDI3NDVjMDE1YjgxY2I4ZjI4MzJhZmVmNjJkN2NmMGJmMzc2N2U3Yjc3ZjI5NGFlZDQ)
+
+We're here to help you with anything PostHog!
