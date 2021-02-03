@@ -1,8 +1,10 @@
-Simple and powerful interface for [ClickHouse](https://clickhouse.yandex/). Fork of [@apla/node-clickhouse](https://github.com/apla/node-clickhouse). [![travis](https://travis-ci.org/apla/node-clickhouse.svg)](https://travis-ci.org/apla/node-clickhouse) [![codecov](https://codecov.io/gh/apla/node-clickhouse/branch/master/graph/badge.svg)](https://codecov.io/gh/apla/node-clickhouse)
+Simple and powerful interface for [ClickHouse](https://clickhouse.yandex/) [![travis](https://travis-ci.org/apla/node-clickhouse.svg)](https://travis-ci.org/apla/node-clickhouse) [![codecov](https://codecov.io/gh/apla/node-clickhouse/branch/master/graph/badge.svg)](https://codecov.io/gh/apla/node-clickhouse)
 ===
 ```sh
 npm install @posthog/clickhouse
 ```
+
+Fork of [`@apla/node-clickhouse`](https://github.com/apla/node-clickhouse).
 
 Synopsis
 ---
