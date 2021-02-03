@@ -1,7 +1,19 @@
 {
-  "name": "@apla/clickhouse",
+  "name": "@posthog/clickhouse",
   "version": "1.6.4",
   "description": "Yandex ClickHouse database interface",
+  "author": "Ivan Baktsheev <dot.and.thing@gmail.com>, PostHog <hey@posthog.com>",
+  "license": "MIT",
+  "keywords": [
+    "clickhouse",
+    "database",
+    "db"
+  ],
+  "repository": "github:PostHog/node-clickhouse",
+  "bugs": {
+    "url": "https://github.com/PostHog/node-clickhouse/issues"
+  },
+  "homepage": "https://github.com/PostHog/node-clickhouse#readme",
   "main": "src/clickhouse.js",
   "scripts": {
     "legacy-install": "node ./src/legacy-support.js",
@@ -12,21 +24,6 @@
     "simpletest": "mocha --recursive ./test -R spec",
     "torturetest": "TORTURE=1 mocha -gc --recursive ./test -R spec"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/apla/node-clickhouse.git"
-  },
-  "keywords": [
-    "clickhouse",
-    "database",
-    "db"
-  ],
-  "author": "Ivan Baktsheev <dot.and.thing@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/apla/node-clickhouse/issues"
-  },
-  "homepage": "https://github.com/apla/node-clickhouse#readme",
   "dependencies": {},
   "devDependencies": {
     "bluebird": "^3.5.0",
@@ -35,6 +32,6 @@
     "nyc": "^10.2.0"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=12"
   }
 }
