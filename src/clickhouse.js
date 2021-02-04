@@ -6,8 +6,6 @@ var util = require ('util');
 
 // var debug = require ('debug')('clickhouse');
 
-require ('./legacy-support');
-
 var RecordStream = require ('./streams').RecordStream;
 var JSONStream   = require ('./streams').JSONStream;
 

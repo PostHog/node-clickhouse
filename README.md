@@ -19,7 +19,6 @@ const stream = ch.query("SELECT 1", (err, data) => {})
 stream.pipe(process.stdout)
 
 // promise interface, not recommended for selects
-// (requires 'util.promisify' for node < 8, Promise shim for node < 4)
 await ch.querying("CREATE DATABASE test")
 ```
 Examples:
