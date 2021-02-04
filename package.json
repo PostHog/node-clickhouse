@@ -14,8 +14,8 @@
     "url": "https://github.com/PostHog/node-clickhouse/issues"
   },
   "homepage": "https://github.com/PostHog/node-clickhouse#readme",
-  "main": "dist/clickhouse.js",
-  "types": "dist/clickhouse.d.ts",
+  "main": "src/clickhouse.js",
+  "types": "src/clickhouse.d.ts",
   "scripts": {
     "legacy-install": "node ./src/legacy-support.js",
     "launch-docker-image": "docker run --rm -d -p 8123:8123 --name clickhouse-server yandex/clickhouse-server",
@@ -24,15 +24,10 @@
     "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "simpletest": "mocha --recursive ./test -R spec",
     "torturetest": "TORTURE=1 mocha -gc --recursive ./test -R spec",
-    "build": "yarn clean && yarn compile",
-    "clean": "rimraf dist/*",
-    "purge": "rimraf dist node_modules",
-    "compile": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepublishOnly": "yarn build"
+    "format:check": "prettier --check ."
   },
   "dependencies": {},
   "devDependencies": {
