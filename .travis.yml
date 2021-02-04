@@ -1,40 +1,40 @@
 language: node_js
 matrix:
-  include:
-#    - node_js: '0.10'
-#      env: _CXXAUTO=1
-#    - node_js: '0.12'
-#      env: _CXXAUTO=1
-#    - node_js: '4'
-#      env: CXX=g++-4.8
-    - node_js: '6'
-#      env: CXX=g++-4.8
-    - node_js: '8'
-#      env: CXX=g++-4.8
-    - node_js: '10'
+    include:
+        #    - node_js: '0.10'
+        #      env: _CXXAUTO=1
+        #    - node_js: '0.12'
+        #      env: _CXXAUTO=1
+        #    - node_js: '4'
+        #      env: CXX=g++-4.8
+        - node_js: '6'
+        #      env: CXX=g++-4.8
+        - node_js: '8'
+        #      env: CXX=g++-4.8
+        - node_js: '10'
 dist: trusty
 sudo: required
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
 #      - gcc-4.8
 #      - g++-4.8
 before_script:
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E0C56BD4
-  - echo "deb http://repo.yandex.ru/clickhouse/deb/stable/ main/" | sudo tee -a /etc/apt/sources.list
-  - sudo apt-get update -qq
-  - sudo apt-get install clickhouse-server-common clickhouse-client -y
-  - sudo sed -i -- 's/listen_host>::/listen_host>0.0.0.0/g' /etc/clickhouse-server/config.xml
-  - sudo service clickhouse-server start
-  - sudo netstat -ltn
-  - (tail -n 100 /var/log/clickhouse-server/clickhouse-server.err.log || exit 0)
-  - (tail -n 100 /var/log/clickhouse-server/clickhouse-server.log || exit 0)
-  - (id metrika || exit 0)
-  - (ls -la /var/lib/clickhouse/data/default/ || exit 0)
-  - (ls -la /var/lib/clickhouse/metadata/default/ || exit 0)
-  - curl -v "http://127.0.0.1:8123/"
-  - npm run legacy-install
+    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E0C56BD4
+    - echo "deb http://repo.yandex.ru/clickhouse/deb/stable/ main/" | sudo tee -a /etc/apt/sources.list
+    - sudo apt-get update -qq
+    - sudo apt-get install clickhouse-server-common clickhouse-client -y
+    - sudo sed -i -- 's/listen_host>::/listen_host>0.0.0.0/g' /etc/clickhouse-server/config.xml
+    - sudo service clickhouse-server start
+    - sudo netstat -ltn
+    - (tail -n 100 /var/log/clickhouse-server/clickhouse-server.err.log || exit 0)
+    - (tail -n 100 /var/log/clickhouse-server/clickhouse-server.log || exit 0)
+    - (id metrika || exit 0)
+    - (ls -la /var/lib/clickhouse/data/default/ || exit 0)
+    - (ls -la /var/lib/clickhouse/metadata/default/ || exit 0)
+    - curl -v "http://127.0.0.1:8123/"
+    - npm run legacy-install
 after_script:
-  - npm run report
+    - npm run report

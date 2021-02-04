@@ -1,45 +1,45 @@
 {
-  "name": "@posthog/clickhouse",
-  "version": "1.7.0",
-  "description": "Yandex ClickHouse database interface",
-  "author": "Ivan Baktsheev <dot.and.thing@gmail.com>, PostHog <hey@posthog.com>",
-  "license": "MIT",
-  "keywords": [
-    "clickhouse",
-    "database",
-    "db"
-  ],
-  "repository": "github:PostHog/node-clickhouse",
-  "bugs": {
-    "url": "https://github.com/PostHog/node-clickhouse/issues"
-  },
-  "homepage": "https://github.com/PostHog/node-clickhouse#readme",
-  "main": "src/clickhouse.js",
-  "types": "src/clickhouse.d.ts",
-  "scripts": {
-    "legacy-install": "node ./src/legacy-support.js",
-    "launch-docker-image": "docker run --rm -d -p 8123:8123 --name clickhouse-server yandex/clickhouse-server",
-    "stop-docker-image": "docker stop clickhouse-server",
-    "test": "nyc mocha --recursive ./test -R spec",
-    "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "simpletest": "mocha --recursive ./test -R spec",
-    "torturetest": "TORTURE=1 mocha -gc --recursive ./test -R spec",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^12.0.0",
-    "bluebird": "^3.5.0",
-    "codecov": "^2.2.0",
-    "mocha": "^2.5.3",
-    "nyc": "^10.2.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.1.3"
-  },
-  "engines": {
-    "node": ">=12"
-  }
+    "name": "@posthog/clickhouse",
+    "version": "1.7.0",
+    "description": "Yandex ClickHouse database interface",
+    "author": "Ivan Baktsheev <dot.and.thing@gmail.com>, PostHog <hey@posthog.com>",
+    "license": "MIT",
+    "keywords": [
+        "clickhouse",
+        "database",
+        "db"
+    ],
+    "repository": "github:PostHog/node-clickhouse",
+    "bugs": {
+        "url": "https://github.com/PostHog/node-clickhouse/issues"
+    },
+    "homepage": "https://github.com/PostHog/node-clickhouse#readme",
+    "main": "src/clickhouse.js",
+    "types": "src/clickhouse.d.ts",
+    "scripts": {
+        "legacy-install": "node ./src/legacy-support.js",
+        "launch-docker-image": "docker run --rm -d -p 8123:8123 --name clickhouse-server yandex/clickhouse-server",
+        "stop-docker-image": "docker stop clickhouse-server",
+        "test": "nyc mocha --recursive ./test -R spec",
+        "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
+        "simpletest": "mocha --recursive ./test -R spec",
+        "torturetest": "TORTURE=1 mocha -gc --recursive ./test -R spec",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^12.0.0",
+        "bluebird": "^3.5.0",
+        "codecov": "^2.2.0",
+        "mocha": "^2.5.3",
+        "nyc": "^10.2.0",
+        "prettier": "^2.2.1",
+        "typescript": "^4.1.3"
+    },
+    "engines": {
+        "node": ">=12"
+    }
 }
